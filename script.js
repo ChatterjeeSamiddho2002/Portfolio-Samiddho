@@ -1,22 +1,20 @@
-// Activate content on scroll
-const contents = document.querySelectorAll('.content');
+const buttons = document.querySelectorAll(".gate button");
+const panels = document.querySelectorAll(".panel");
+const img = document.getElementById("profile-img");
+const toggle = document.getElementById("mosToggle");
 
-window.addEventListener('scroll', () => {
-  const scrollY = window.scrollY + window.innerHeight * 0.75;
-  contents.forEach(content => {
-    if (scrollY > content.offsetTop) {
-      content.classList.add('active');
-    }
+/* Gate switching */
+buttons.forEach(btn => {
+  btn.addEventListener("click", () => {
+    panels.forEach(p => p.classList.remove("active"));
+    document.getElementById(btn.dataset.target).classList.add("active");
+
+    img.style.opacity = btn.dataset.target === "about" ? "1" : "0";
   });
 });
 
-// Optional: Animate SVG timeline path drawing
-const path = document.getElementById('timeline-path');
-const pathLength = path.getTotalLength();
-path.style.strokeDasharray = pathLength;
-path.style.strokeDashoffset = pathLength;
-
-window.addEventListener('scroll', () => {
-  const scrollPercent = window.scrollY / (document.body.scrollHeight - window.innerHeight);
-  path.style.strokeDashoffset = pathLength * (1 - scrollPercent);
+/* NMOS / PMOS toggle */
+toggle.addEventListener("change", () => {
+  document.body.classList.toggle("pmos");
+  document.body.classList.toggle("nmos");
 });
