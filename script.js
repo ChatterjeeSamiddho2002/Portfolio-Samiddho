@@ -1,20 +1,25 @@
-const buttons = document.querySelectorAll(".gate button");
-const panels = document.querySelectorAll(".panel");
-const img = document.getElementById("profile-img");
-const toggle = document.getElementById("mosToggle");
+// Panel switching
+document.querySelectorAll('.gate button[data-target]').forEach(btn => {
+  btn.addEventListener('click', () => {
+    // Remove active from all buttons and panels
+    document.querySelectorAll('.gate button').forEach(b => b.classList.remove('active'));
+    document.querySelectorAll('.panel').forEach(p => p.classList.remove('active'));
 
-/* Gate switching */
-buttons.forEach(btn => {
-  btn.addEventListener("click", () => {
-    panels.forEach(p => p.classList.remove("active"));
-    document.getElementById(btn.dataset.target).classList.add("active");
-
-    img.style.opacity = btn.dataset.target === "about" ? "1" : "0";
+    // Add active to clicked
+    btn.classList.add('active');
+    const target = document.getElementById(btn.dataset.target);
+    target.classList.add('active');
   });
 });
 
-/* NMOS / PMOS toggle */
-toggle.addEventListener("change", () => {
-  document.body.classList.toggle("pmos");
-  document.body.classList.toggle("nmos");
+// NMOS/PMOS theme toggle
+const toggle = document.getElementById('mosToggle');
+toggle.addEventListener('change', () => {
+  if (toggle.checked) {
+    document.body.classList.remove('nmos');
+    document.body.classList.add('pmos');
+  } else {
+    document.body.classList.remove('pmos');
+    document.body.classList.add('nmos');
+  }
 });

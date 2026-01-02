@@ -2,16 +2,13 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title>Samiddho Chatterjee, this is my Portfolio</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
+  <title>Samiddho Chatterjee | VLSI Portfolio</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500&display=swap" rel="stylesheet">
-
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
 </head>
-
 <body class="nmos">
 
 <main id="mosfet">
@@ -19,9 +16,11 @@
   <!-- ================= GATE ================= -->
   <aside class="gate">
     <h3>Gate</h3>
-    <button data-target="about">About Me</button>
-    <button data-target="experience">Experience</button>
-    <button data-target="education">Education</button>
+    <nav>
+      <button data-target="about" class="active">About Me</button>
+      <button data-target="experience">Experience</button>
+      <button data-target="education">Education</button>
+    </nav>
 
     <div class="mos-toggle">
       <span>NMOS</span>
@@ -35,23 +34,23 @@
 
   <!-- ================= CHANNEL ================= -->
   <section class="channel">
-
     <div class="channel-image">
-      <img src="assets/Samiddho.png" id="profile-img" alt="Samiddho Chatterjee">
+      <img src="https://thumbs.dreamstime.com/b/portrait-young-indian-male-designer-engineer-sitting-office-table-looking-camera-portrait-young-291832800.jpg" id="profile-img" alt="Samiddho Chatterjee">
     </div>
 
-    <!-- Carrier Flow -->
+    <!-- Carrier Flow Animation -->
     <div class="carrier-flow">
+      <span class="carrier"></span>
+      <span class="carrier"></span>
       <span class="carrier"></span>
       <span class="carrier"></span>
       <span class="carrier"></span>
     </div>
 
     <div class="channel-content">
-
       <section id="about" class="panel active">
         <h2>About Me</h2>
-        <p>I am <strong>Samiddho Chatterjee</strong>, pursuing M.Tech in Electronics and Communication Engineering at <strong>BIT Mesra</strong>.</p>
+        <p>I am <strong>Samiddho Chatterjee</strong>, pursuing M.Tech in Electronics and Communication Engineering (VLSI) at <strong>BIT Mesra</strong>.</p>
         <p>B.Tech in ECE from <strong>VIT Chennai</strong>. Former Embedded Systems & C Intern at <strong>KPIT Pune</strong>.</p>
         <p>Interests: <strong>Analog Circuits, RF & Microwave, VLSI Design</strong>, and AI/ML.</p>
       </section>
@@ -68,10 +67,9 @@
 
       <section id="education" class="panel">
         <h2>Education</h2>
-        <p><strong>B.Tech ECE</strong> — VIT Chennai (CGPA 8.28)</p>
         <p><strong>M.Tech ECE (VLSI)</strong> — BIT Mesra (CGPA 8.63)</p>
+        <p><strong>B.Tech ECE</strong> — VIT Chennai (CGPA 8.28)</p>
       </section>
-
     </div>
   </section>
 
@@ -79,26 +77,28 @@
   <section class="drain">
     <h2>Drain — Projects</h2>
 
-    <h4>Radar Signal Processing (Deep Learning)</h4>
-    <ul>
-      <li>DeepLabV3+ vs U-Net</li>
-      <li>Dice Loss, Accuracy evaluation</li>
-    </ul>
+    <div class="project">
+      <h4>Radar Signal Processing (Deep Learning)</h4>
+      <ul>
+        <li>Compared DeepLabV3+ vs U-Net for semantic segmentation</li>
+        <li>Dice Loss, Accuracy evaluation on radar datasets</li>
+      </ul>
+    </div>
 
-    <h4>Li-Fi Audio Transmission</h4>
-    <ul>
-      <li>Visible light communication</li>
-      <li>Shannon capacity analysis</li>
-    </ul>
+    <div class="project">
+      <h4>Li-Fi Audio Transmission</h4>
+      <ul>
+        <li>Visible light communication system for audio</li>
+        <li>Shannon capacity analysis and implementation</li>
+      </ul>
+    </div>
   </section>
 
   <!-- ================= SOURCE ================= -->
   <footer class="source">
     <h2>Source — Contact</h2>
     <p>Email: <a href="mailto:samiddhochatterjee2025@gmail.com">samiddhochatterjee2025@gmail.com</a></p>
-    <a href="assets/Samiddho_Chatterjee_Resume.pdf" target="_blank" class="resume-link">
-      View Resume
-    </a>
+    <a href="assets/Samiddho_Chatterjee_Resume.pdf" target="_blank" class="resume-link">View Resume (PDF)</a>
   </footer>
 
 </main>
