@@ -19,10 +19,11 @@
 
   <header class="header">
     <div class="container">
-      <h1 class="logo">Samiddho<span>.dev</span></h1>
+      <h1 class="logo">Samiddho<span>Chatterjee</span></h1>
       <nav class="nav">
         <a href="#home">Home</a>
         <a href="#about">About</a>
+        <a href="#experience">Experience</a>
         <a href="#projects">Projects</a>
         <a href="#contact">Contact</a>
       </nav>
@@ -50,8 +51,8 @@
       <h2 class="section-title" data-aos="fade-up">About Me</h2>
       <div class="about-grid">
         <div class="about-text" data-aos="fade-right">
-          <p>I am pursuing <strong>M.Tech in VLSI Design</strong> at <strong>BIT Mesra</strong> with a passion for analog circuit design, RF systems, and semiconductor physics.</p>
-          <p>Previously, I interned at <strong>KPIT Technologies</strong> working on embedded systems and automotive protocols. My interests span from low-power IC design to AI-driven signal processing.</p>
+          <p>I am pursuing <strong>M.Tech in VLSI Design</strong> at <strong>BIT Mesra</strong> (CGPA 8.63) with a passion for analog circuit design, RF systems, and semiconductor physics.</p>
+          <p><strong>B.Tech ECE</strong> from <strong>VIT Chennai</strong> (CGPA 8.28). Interests span from low-power IC design to AI-driven signal processing.</p>
           
           <div class="skills">
             <span class="skill-tag">Analog Design</span>
@@ -63,21 +64,50 @@
           </div>
         </div>
         <div class="about-image" data-aos="fade-left">
-          <img src="https://thumbs.dreamstime.com/b/portrait-young-indian-male-designer-engineer-sitting-office-table-looking-camera-portrait-young-291832800.jpg" alt="Samiddho Chatterjee">
+          <img src="assets/profile.jpg" alt="Samiddho Chatterjee" id="profile-img"> <!-- YOUR LOCAL IMAGE -->
         </div>
       </div>
     </div>
   </section>
 
-  <section id="projects" class="section bg-alt">
+  <!-- NEW EXPERIENCE SECTION -->
+  <section id="experience" class="section bg-alt">
     <div class="container">
-      <h2 class="section-title" data-aos="fade-up">Projects</h2>
+      <h2 class="section-title" data-aos="fade-up">Experience & Education</h2>
+      <div class="experience-grid">
+        
+        <div class="exp-card" data-aos="fade-right" data-aos-delay="100">
+          <h3><i class="fas fa-briefcase"></i> KPIT Technologies, Pune</h3>
+          <p class="exp-date">Jan–Jul 2025 (Embedded Systems & C Intern)</p>
+          <ul>
+            <li>STM32 development (GPIO, ADC, DAC, Timers, HAL)</li>
+            <li><strong>Automotive CAN protocol implementation</strong></li>
+            <li>AUTOSAR architecture compliance</li>
+          </ul>
+        </div>
+
+        <div class="exp-card" data-aos="fade-left" data-aos-delay="200">
+          <h3><i class="fas fa-graduation-cap"></i> Education</h3>
+          <div class="edu-item">
+            <p><strong>M.Tech ECE (VLSI)</strong><br>BIT Mesra | CGPA <strong>8.63</strong></p>
+          </div>
+          <div class="edu-item">
+            <p><strong>B.Tech ECE</strong><br>VIT Chennai | CGPA <strong>8.28</strong></p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="projects" class="section">
+    <div class="container">
+      <h2 class="section-title" data-aos="fade-up">Featured Projects</h2>
       <div class="projects-grid">
         
         <div class="project-card" data-aos="flip-left">
           <div class="card-inner">
-            <h3>Radar Signal Processing with Deep Learning</h3>
-            <p>Compared DeepLabV3+ and U-Net architectures for semantic segmentation on radar datasets. Evaluated using Dice coefficient and accuracy metrics.</p>
+            <h3>Radar Signal Processing (Deep Learning)</h3>
+            <p>Compared DeepLabV3+ vs U-Net for semantic segmentation on radar datasets. Dice Loss & accuracy evaluation.</p>
             <div class="tech-tags">
               <span>PyTorch</span>
               <span>Deep Learning</span>
@@ -89,7 +119,7 @@
         <div class="project-card" data-aos="flip-left" data-aos-delay="200">
           <div class="card-inner">
             <h3>Li-Fi Audio Transmission System</h3>
-            <p>Designed and implemented visible light communication system for wireless audio transmission. Analyzed Shannon capacity and real-world performance.</p>
+            <p>Visible light communication for wireless audio. Shannon capacity analysis & hardware implementation.</p>
             <div class="tech-tags">
               <span>Embedded C</span>
               <span>Optics</span>
@@ -98,49 +128,41 @@
           </div>
         </div>
 
-        <div class="project-card" data-aos="flip-left" data-aos-delay="400">
-          <div class="card-inner">
-            <h3>Automotive CAN Protocol Implementation</h3>
-            <p>Developed CAN bus communication modules using STM32 and AUTOSAR-compliant architecture during internship at KPIT.</p>
-            <div class="tech-tags">
-              <span>STM32</span>
-              <span>CAN</span>
-              <span>AUTOSAR</span>
-            </div>
-          </div>
-        </div>
       </div>
     </div>
   </section>
 
-  <section id="contact" class="section">
+  <section id="contact" class="section bg-alt">
     <div class="container">
       <h2 class="section-title" data-aos="fade-up">Get In Touch</h2>
       <div class="contact-content" data-aos="fade-up" data-aos-delay="200">
-        <p>I'm always open to discussing new opportunities, collaborations, or just geeky tech talks!</p>
+        <p>Let's discuss VLSI opportunities, RF projects, or tech collaborations!</p>
         <a href="mailto:samiddhochatterjee2025@gmail.com" class="email-link">
           samiddhochatterjee2025@gmail.com
         </a>
         <div class="social-links">
-          <a href="#" aria-label="LinkedIn">LinkedIn</a>
-          <a href="#" aria-label="GitHub">GitHub</a>
-          <a href="#" aria-label="Twitter">Twitter</a>
+          <a href="https://linkedin.com/in/samiddhochatterjee" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+          <a href="https://github.com/samiddhochatterjee" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
+          <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+        </div>
+        <div style="margin-top: 2rem; font-size: 0.9rem; opacity: 0.7;">
+          <a href="assets/Samiddho_Chatterjee_Resume.pdf" target="_blank" class="btn secondary" style="padding: 0.7rem 1.5rem; font-size: 0.9rem;">
+            <i class="fas fa-file-pdf"></i> Download Resume
+          </a>
         </div>
       </div>
     </div>
   </section>
 
+  <!-- Light/Dark Mode Toggle -->
+  <div class="theme-toggle" id="themeToggle">
+    <i class="fas fa-moon"></i>
+  </div>
+
   <!-- Libraries -->
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
   <script src="script.js"></script>
-
-  <!-- Light/Dark Mode Toggle -->
-<div class="theme-toggle" id="themeToggle">
-  <i class="fas fa-moon"></i>
-</div>
-
-<!-- Font Awesome for icons -->
-<script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
 </body>
 </html>
