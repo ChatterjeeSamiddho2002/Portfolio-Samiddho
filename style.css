@@ -1,3 +1,4 @@
+/* RESET */
 * {
   margin: 0;
   padding: 0;
@@ -10,13 +11,15 @@ body {
   color: #111;
 }
 
-/* INTRO */
+/* ======================
+   INTRO SECTION
+====================== */
 #intro {
   height: 100vh;
   display: flex;
   align-items: center;
-  padding-left: 120px;
-  gap: 80px;
+  padding-left: 80px;     /* reduced from 120 */
+  gap: 48px;              /* reduced from 80 */
 }
 
 .intro-art {
@@ -27,17 +30,18 @@ body {
 .intro-art img {
   width: 100%;
   height: auto;
+  display: block;         /* removes inline spacing */
   filter: grayscale(100%);
 }
 
 .intro-text h1 {
-  font-size: 64px;
+  font-size: 56px;        /* slightly reduced */
   font-weight: 400;
 }
 
 .intro-text p {
   margin-top: 12px;
-  letter-spacing: 3px;
+  letter-spacing: 2px;    /* reduced from 3 */
 }
 
 .intro-text span {
@@ -47,7 +51,9 @@ body {
   color: #777;
 }
 
-/* TIMELINE */
+/* ======================
+   TIMELINE
+====================== */
 #timeline {
   position: fixed;
   left: 60px;
@@ -63,16 +69,18 @@ body {
   background: #000;
 }
 
-/* SECTIONS */
+/* ======================
+   CONTENT SECTIONS
+====================== */
 .content {
   position: relative;
-  min-height: 100vh;
-  padding-left: 180px;
+  min-height: 80vh;       /* reduced from 100vh */
+  padding-left: 180px;    /* leaves space for timeline */
   display: flex;
   align-items: center;
   opacity: 0;
   transform: translateX(-30px);
-  transition: all 0.6s ease;
+  transition: opacity 0.6s ease, transform 0.6s ease;
 }
 
 .content h2 {
@@ -86,7 +94,9 @@ body {
   transform: translateX(0);
 }
 
-/* CONNECTOR LINE */
+/* ======================
+   CONNECTOR LINE
+====================== */
 .content::before {
   content: "";
   position: absolute;
@@ -97,9 +107,16 @@ body {
   background: #000;
   transform: rotate(-20deg);
   opacity: 0;
-  transition: opacity 0.4s ease, transform 0.4s ease;
+  transition: opacity 0.4s ease;
 }
 
+.content.active::before {
+  opacity: 1;
+}
+
+/* ======================
+   RESUME SECTION
+====================== */
 .resume-block {
   display: flex;
   flex-direction: column;
@@ -118,10 +135,4 @@ body {
 
 .resume-link:hover {
   opacity: 0.6;
-}
-
-
-.content.active::before {
-  opacity: 1;
-  transform: rotate(-20deg) translateX(0);
 }
