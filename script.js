@@ -1,25 +1,49 @@
-// Panel switching
-document.querySelectorAll('.gate button[data-target]').forEach(btn => {
-  btn.addEventListener('click', () => {
-    // Remove active from all buttons and panels
-    document.querySelectorAll('.gate button').forEach(b => b.classList.remove('active'));
-    document.querySelectorAll('.panel').forEach(p => p.classList.remove('active'));
-
-    // Add active to clicked
-    btn.classList.add('active');
-    const target = document.getElementById(btn.dataset.target);
-    target.classList.add('active');
-  });
+// Initialize AOS
+AOS.init({
+  once: true,
+  duration: 800
 });
 
-// NMOS/PMOS theme toggle
-const toggle = document.getElementById('mosToggle');
-toggle.addEventListener('change', () => {
-  if (toggle.checked) {
-    document.body.classList.remove('nmos');
-    document.body.classList.add('pmos');
-  } else {
-    document.body.classList.remove('pmos');
-    document.body.classList.add('nmos');
-  }
+// Particles.js config
+particlesJS("particles-js", {
+  particles: {
+    number: { value: 80, density: { enable: true, value_area: 800 } },
+    color: { value: "#00ffff" },
+    shape: { type: "circle" },
+    opacity: { value: 0.5, random: true },
+    size: { value: 3, random: true },
+    line_linked: {
+      enable: true,
+      distance: 150,
+      color: "#00ffff",
+      opacity: 0.2,
+      width: 1
+    },
+    move: {
+      enable: true,
+      speed: 2,
+      direction: "none",
+      random: false,
+      straight: false,
+      out_mode: "out"
+    }
+  },
+  interactivity: {
+    detect_on: "canvas",
+    events: {
+      onhover: { enable: true, mode: "repulse" },
+      resize: true
+    }
+  },
+  retina_detect: true
+});
+
+// Smooth scrolling for nav links
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+  anchor.addEventListener('click', function (e) {
+    e.preventDefault();
+    document.querySelector(this.getAttribute('href')).scrollIntoView({
+      behavior: 'smooth'
+    });
+  });
 });

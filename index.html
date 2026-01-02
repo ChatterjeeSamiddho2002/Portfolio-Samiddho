@@ -2,107 +2,145 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Samiddho Chatterjee | VLSI Portfolio</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Samiddho Chatterjee | VLSI Engineer</title>
+  
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700&family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+  
+  <!-- AOS Animation Library -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  
+  <link rel="stylesheet" href="style.css"/>
 </head>
-<body class="nmos">
+<body>
+  <!-- Particle Background -->
+  <div id="particles-js"></div>
 
-<main id="mosfet">
-
-  <!-- ================= GATE ================= -->
-  <aside class="gate">
-    <h3>Gate</h3>
-    <nav>
-      <button data-target="about" class="active">About Me</button>
-      <button data-target="experience">Experience</button>
-      <button data-target="education">Education</button>
-    </nav>
-
-    <div class="mos-toggle">
-      <span>NMOS</span>
-      <label class="switch">
-        <input type="checkbox" id="mosToggle">
-        <span class="slider"></span>
-      </label>
-      <span>PMOS</span>
+  <header class="header">
+    <div class="container">
+      <h1 class="logo">Samiddho<span>.dev</span></h1>
+      <nav class="nav">
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contact</a>
+      </nav>
     </div>
-  </aside>
+  </header>
 
-  <!-- ================= CHANNEL ================= -->
-  <section class="channel">
-    <div class="channel-image">
-      <img src="https://thumbs.dreamstime.com/b/portrait-young-indian-male-designer-engineer-sitting-office-table-looking-camera-portrait-young-291832800.jpg" id="profile-img" alt="Samiddho Chatterjee">
+  <section id="home" class="hero">
+    <div class="hero-content" data-aos="zoom-in" data-aos-duration="1000">
+      <h2>Hello, I'm <span>Samiddho Chatterjee</span></h2>
+      <p>M.Tech VLSI Student | Analog & RF Enthusiast | Embedded Systems</p>
+      <div class="cta-buttons">
+        <a href="#projects" class="btn primary">View Projects</a>
+        <a href="assets/Samiddho_Chatterjee_Resume.pdf" target="_blank" class="btn secondary">Resume</a>
+      </div>
     </div>
-
-    <!-- Carrier Flow Animation -->
-    <div class="carrier-flow">
-      <span class="carrier"></span>
-      <span class="carrier"></span>
-      <span class="carrier"></span>
-      <span class="carrier"></span>
-      <span class="carrier"></span>
-    </div>
-
-    <div class="channel-content">
-      <section id="about" class="panel active">
-        <h2>About Me</h2>
-        <p>I am <strong>Samiddho Chatterjee</strong>, pursuing M.Tech in Electronics and Communication Engineering (VLSI) at <strong>BIT Mesra</strong>.</p>
-        <p>B.Tech in ECE from <strong>VIT Chennai</strong>. Former Embedded Systems & C Intern at <strong>KPIT Pune</strong>.</p>
-        <p>Interests: <strong>Analog Circuits, RF & Microwave, VLSI Design</strong>, and AI/ML.</p>
-      </section>
-
-      <section id="experience" class="panel">
-        <h2>Experience</h2>
-        <p><strong>KPIT Technologies, Pune</strong> (Jan–Jul 2025)</p>
-        <ul>
-          <li>STM32 (GPIO, ADC, DAC, Timers, HAL)</li>
-          <li>Automotive CAN protocol</li>
-          <li>AUTOSAR architecture</li>
-        </ul>
-      </section>
-
-      <section id="education" class="panel">
-        <h2>Education</h2>
-        <p><strong>M.Tech ECE (VLSI)</strong> — BIT Mesra (CGPA 8.63)</p>
-        <p><strong>B.Tech ECE</strong> — VIT Chennai (CGPA 8.28)</p>
-      </section>
+    <div class="scroll-down">
+      <span></span>
+      <span></span>
+      <span></span>
     </div>
   </section>
 
-  <!-- ================= DRAIN ================= -->
-  <section class="drain">
-    <h2>Drain — Projects</h2>
-
-    <div class="project">
-      <h4>Radar Signal Processing (Deep Learning)</h4>
-      <ul>
-        <li>Compared DeepLabV3+ vs U-Net for semantic segmentation</li>
-        <li>Dice Loss, Accuracy evaluation on radar datasets</li>
-      </ul>
-    </div>
-
-    <div class="project">
-      <h4>Li-Fi Audio Transmission</h4>
-      <ul>
-        <li>Visible light communication system for audio</li>
-        <li>Shannon capacity analysis and implementation</li>
-      </ul>
+  <section id="about" class="section">
+    <div class="container">
+      <h2 class="section-title" data-aos="fade-up">About Me</h2>
+      <div class="about-grid">
+        <div class="about-text" data-aos="fade-right">
+          <p>I am pursuing <strong>M.Tech in VLSI Design</strong> at <strong>BIT Mesra</strong> with a passion for analog circuit design, RF systems, and semiconductor physics.</p>
+          <p>Previously, I interned at <strong>KPIT Technologies</strong> working on embedded systems and automotive protocols. My interests span from low-power IC design to AI-driven signal processing.</p>
+          
+          <div class="skills">
+            <span class="skill-tag">Analog Design</span>
+            <span class="skill-tag">VLSI CAD</span>
+            <span class="skill-tag">RF & Microwave</span>
+            <span class="skill-tag">STM32</span>
+            <span class="skill-tag">Deep Learning</span>
+            <span class="skill-tag">Python</span>
+          </div>
+        </div>
+        <div class="about-image" data-aos="fade-left">
+          <img src="https://thumbs.dreamstime.com/b/portrait-young-indian-male-designer-engineer-sitting-office-table-looking-camera-portrait-young-291832800.jpg" alt="Samiddho Chatterjee">
+        </div>
+      </div>
     </div>
   </section>
 
-  <!-- ================= SOURCE ================= -->
-  <footer class="source">
-    <h2>Source — Contact</h2>
-    <p>Email: <a href="mailto:samiddhochatterjee2025@gmail.com">samiddhochatterjee2025@gmail.com</a></p>
-    <a href="assets/Samiddho_Chatterjee_Resume.pdf" target="_blank" class="resume-link">View Resume (PDF)</a>
-  </footer>
+  <section id="projects" class="section bg-alt">
+    <div class="container">
+      <h2 class="section-title" data-aos="fade-up">Projects</h2>
+      <div class="projects-grid">
+        
+        <div class="project-card" data-aos="flip-left">
+          <div class="card-inner">
+            <h3>Radar Signal Processing with Deep Learning</h3>
+            <p>Compared DeepLabV3+ and U-Net architectures for semantic segmentation on radar datasets. Evaluated using Dice coefficient and accuracy metrics.</p>
+            <div class="tech-tags">
+              <span>PyTorch</span>
+              <span>Deep Learning</span>
+              <span>Signal Processing</span>
+            </div>
+          </div>
+        </div>
+        
+        <div class="project-card" data-aos="flip-left" data-aos-delay="200">
+          <div class="card-inner">
+            <h3>Li-Fi Audio Transmission System</h3>
+            <p>Designed and implemented visible light communication system for wireless audio transmission. Analyzed Shannon capacity and real-world performance.</p>
+            <div class="tech-tags">
+              <span>Embedded C</span>
+              <span>Optics</span>
+              <span>VLC</span>
+            </div>
+          </div>
+        </div>
 
-</main>
+        <div class="project-card" data-aos="flip-left" data-aos-delay="400">
+          <div class="card-inner">
+            <h3>Automotive CAN Protocol Implementation</h3>
+            <p>Developed CAN bus communication modules using STM32 and AUTOSAR-compliant architecture during internship at KPIT.</p>
+            <div class="tech-tags">
+              <span>STM32</span>
+              <span>CAN</span>
+              <span>AUTOSAR</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
 
-<script src="script.js"></script>
+  <section id="contact" class="section">
+    <div class="container">
+      <h2 class="section-title" data-aos="fade-up">Get In Touch</h2>
+      <div class="contact-content" data-aos="fade-up" data-aos-delay="200">
+        <p>I'm always open to discussing new opportunities, collaborations, or just geeky tech talks!</p>
+        <a href="mailto:samiddhochatterjee2025@gmail.com" class="email-link">
+          samiddhochatterjee2025@gmail.com
+        </a>
+        <div class="social-links">
+          <a href="#" aria-label="LinkedIn">LinkedIn</a>
+          <a href="#" aria-label="GitHub">GitHub</a>
+          <a href="#" aria-label="Twitter">Twitter</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Libraries -->
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+  <script src="script.js"></script>
+
+  <!-- Light/Dark Mode Toggle -->
+<div class="theme-toggle" id="themeToggle">
+  <i class="fas fa-moon"></i>
+</div>
+
+<!-- Font Awesome for icons -->
+<script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
 </body>
 </html>
