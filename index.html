@@ -2,101 +2,192 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title>Samiddho | Portfolio</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="style.css">
+  <title>Samiddho Chatterjee | Portfolio</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
 
-  <!-- SVG TIMELINE -->
-  <svg id="timeline-svg" viewBox="0 0 200 2200">
+  <!-- TIMELINE SVG -->
+  <svg id="timeline-svg" viewBox="0 0 200 2200" aria-hidden="true">
     <path
       id="timeline-path"
-      d="
-        M100 0
-        L100 300
-        L140 360
-        L100 420
-        L100 700
-        L140 760
-        L100 820
-        L100 1100
-        L140 1160
-        L100 1220
-        L100 1500
-        L140 1560
-        L100 1620
-        L100 1900
-      "
+      d="M100 0 L100 300 L140 360 L100 420 L100 700 L140 760 L100 820 L100 1100 L140 1160 L100 1220 L100 1500 L140 1560 L100 1620 L100 1900"
       fill="none"
       stroke="black"
       stroke-width="2"
     />
   </svg>
 
-  <!-- INTRO -->
-  <section id="intro">
-    <div class="intro-image">
-      <img src="assets/Samiddho.png" alt="Samiddho portrait">
-    </div>
+  <!-- HEADER / INTRO -->
+  <header id="intro">
+    <div class="intro-container">
+      <div class="intro-image">
+        <img src="assets/Samiddho.png" alt="Portrait of Samiddho Chatterjee" />
+      </div>
 
-    <div class="intro-text">
-      <h1>Welcome to my Portfolio!</h1>
-      <p>SAMIDDHO CHATTERJEE</p>
-      <span>UG· 2021–2025</span>
-      <span>PG· 2025–2027</span>
-      <span> Former Embedded Systems and C intern at KPIT (January 2025- July 2025) </span>
+      <div class="intro-text">
+        <h1>Samiddho Chatterjee</h1>
+        <p class="tagline">Electronics & Communication Engineer</p>
+
+        <div class="intro-meta">
+          <span><strong>UG:</strong> 2021–2025</span>
+          <span><strong>PG:</strong> 2025–2027</span>
+        </div>
+
+        <p class="experience-highlight">
+          Former Embedded Systems & C Intern at <strong>KPIT, Pune</strong><br />
+          <small>January 2025 – July 2025</small>
+        </p>
+      </div>
+    </div>
+  </header>
+
+  <!-- ABOUT -->
+  <section class="content" id="about">
+    <h2>About Me</h2>
+    <p>
+      Hello! I am <strong>Samiddho Chatterjee</strong>, currently pursuing a
+      <strong>Master of Technology in Electronics and Communication Engineering</strong>
+      at <strong>Birla Institute of Technology, Mesra</strong>.
+    </p>
+    <p>
+      I completed my Bachelor’s degree in Electronics and Communication Engineering
+      from <strong>Vellore Institute of Technology, Chennai</strong>. During my
+      internship at <strong>KPIT, Pune</strong>, I worked as an Embedded Systems and C Engineer.
+    </p>
+    <p>
+      My core interests lie in <strong>Analog Circuits, RF & Microwave Communication,</strong>
+      and <strong>VLSI Design</strong>, which aligns with my current specialization.
+      Additionally, I have a strong interest in <strong>Artificial Intelligence, Machine Learning,</strong>
+      and <strong>Deep Learning</strong>.
+    </p>
+    <p>
+      Outside academics, I enjoy watching and playing sports, and I recently started
+      a fan-page writing account dedicated to one of my favorite sports clubs.
+    </p>
+  </section>
+
+  <!-- EXPERIENCE -->
+  <section class="content" id="experience">
+    <h2>Experience</h2>
+    <div class="card">
+      <h3>Embedded Systems & C Engineer Intern</h3>
+      <span class="company">KPIT Technologies, Pune</span>
+      <span class="duration">January 2025 – July 2025</span>
+
+      <ul>
+        <li>Worked on STM32 microcontrollers using GPIO, Timers, ADC, DAC, and HAL drivers</li>
+        <li>Implemented and analyzed Automotive CAN protocol</li>
+        <li>Gained hands-on experience with AUTOSAR architecture and vehicle subsystems</li>
+      </ul>
     </div>
   </section>
 
-  <!-- CONTENT SECTIONS -->
-  <section class="content"><h2>About Me</h2></section>
-  <span> Hey there! My name is Samiddho Chatterjee, a current student of Masters of Technology in Electronics and Communication Engineering at Birla Instiute of Technology, MESRA campus.
-I have done my graduation in Electronics and Communication engineering from Vellore Instiute of Technology, Chennai campus. I interned at KPIT, Pune office from January 2025 till July 2025 as an Embedded Systems and C Engineer 
-I have interest in Analog circuits, Microwave and RF Circuit Communicatrion and VLSI Circuitry and hence my specialization in my Masters is in that domain. Other than my interests in core domain, my other interest lies in Artificial Intelligence and Machine Learning and Deep Learning
-My hobbies include watching a lot of sports and playing, and have recently started a fan-page write account on one of my favourite clubs. </span>
-  <section class="content"><h2>Experience</h2></section>
-  <span> Embedded Systems and C Engineer at KPIT, Pune office
-    Worked on STM32 boards using GPIO, Timers, ADC and DAC, and HAL Drivers
-    Worked on the automotive CAN protocol 
-    Worked on AUTOSAR methodology with its architectures and vehicular structures (chassis)
-  </span>
-  <section class="content"><h2>Projects</h2></section>
-  <span> Deep Learning Approach for Radar Signal Processing for Earthquake Triggered Landslide Detection
-    Worked on DeepLabV3+ model and created the model from scratch and found out its Dice Loss, Accuracy and other parameters
-    Worked on an already existing UNET Model and compared it with the DeepLabV3+ model.
-  </span>
-  <span> Li-Fi model for audio transfer
-    A small project during the scheduled course topic for transmission of data signal (here audio signals) through light as a medium
-    Wi-Fi works at a frequency of around 2.4GHz, however we are using more Bandwidth when using visible light and thus more data rate (Shannon's Law) 
-  </span>
-  <section class="content"><h2>Skills</h2></section>
-  <span> 1. Programming Languages: C, Python, MySQL
-         2. Technologies: Internet of Things, Database Management Systems (DBMS), Artificial Intelligence, Machine Learning and Deep Learning, VLSI Design, Embedded Systems
-         3. Tools: Cadence, MySQL, MATLAB, Simulink, Google Colab, Kaggle, STM32 CubeIDE
-  </span>
+  <!-- PROJECTS -->
+  <section class="content" id="projects">
+    <h2>Projects</h2>
 
-  <section class="content"><h2>Education</h2></section>
-  <span>
-    Bachelors of Technology, Vellore Institute of Technology, Chennai campus (2021-2025)
-    Electronics and Communication Engineering, CGPA: 8.28
-  </span>
-    <span>
-    Masters of Technology, Birla Institute of Technology, Mesra campus (2025-2027)
-    Electronics and Communication Engineering with specialization in VLSI Design and Embedded Systems, CGPA: 8.63
-  </span>
+    <div class="card">
+      <h3>Deep Learning for Radar Signal Processing</h3>
+      <p class="project-subtitle">Earthquake-Triggered Landslide Detection</p>
+      <ul>
+        <li>Designed and trained a <strong>DeepLabV3+</strong> model from scratch</li>
+        <li>Evaluated performance using Dice Loss, Accuracy, and other metrics</li>
+        <li>Compared results with an existing <strong>U-Net</strong> architecture</li>
+      </ul>
+    </div>
 
-  <section class="content"><h2>Contact</h2></section>
-  <span>
-    Email: samiddhochatterjee2025@gmail
-  </span>
+    <div class="card">
+      <h3>Li-Fi Based Audio Transmission</h3>
+      <ul>
+        <li>Implemented audio data transmission using visible light communication</li>
+        <li>Demonstrated higher potential bandwidth compared to traditional Wi-Fi</li>
+        <li>Applied Shannon’s Law to analyze achievable data rates</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- SKILLS -->
+  <section class="content" id="skills">
+    <h2>Skills</h2>
+
+    <div class="skills-grid">
+      <div>
+        <h4>Programming Languages</h4>
+        <ul>
+          <li>C</li>
+          <li>Python</li>
+          <li>MySQL</li>
+        </ul>
+      </div>
+
+      <div>
+        <h4>Technologies</h4>
+        <ul>
+          <li>Embedded Systems</li>
+          <li>VLSI Design</li>
+          <li>IoT</li>
+          <li>AI / ML / Deep Learning</li>
+          <li>DBMS</li>
+        </ul>
+      </div>
+
+      <div>
+        <h4>Tools</h4>
+        <ul>
+          <li>Cadence</li>
+          <li>MATLAB & Simulink</li>
+          <li>STM32CubeIDE</li>
+          <li>Google Colab</li>
+          <li>Kaggle</li>
+          <li>MySQL</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- EDUCATION -->
+  <section class="content" id="education">
+    <h2>Education</h2>
+
+    <div class="card">
+      <h3>Bachelor of Technology (B.Tech)</h3>
+      <p>Electronics and Communication Engineering</p>
+      <span>Vellore Institute of Technology, Chennai</span>
+      <span>2021 – 2025 | CGPA: 8.28</span>
+    </div>
+
+    <div class="card">
+      <h3>Master of Technology (M.Tech)</h3>
+      <p>ECE – VLSI Design & Embedded Systems</p>
+      <span>Birla Institute of Technology, Mesra</span>
+      <span>2025 – 2027 | CGPA: 8.63</span>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section class="content" id="contact">
+    <h2>Contact</h2>
+    <p>Email: <a href="mailto:samiddhochatterjee2025@gmail.com">samiddhochatterjee2025@gmail.com</a></p>
+  </section>
+
+  <!-- RESUME -->
   <section class="content" id="resume">
     <div class="resume-block">
       <h2>Resume</h2>
-      <a href="assets/Samiddho_Chatterjee_Resume.pdf" target="_blank" class="resume-link">View / Download Resume</a>
+      <a href="assets/Samiddho_Chatterjee_Resume.pdf" target="_blank" class="resume-link">
+        View / Download Resume
+      </a>
     </div>
   </section>
 
+  <!-- Scripts -->
   <script src="script.js"></script>
 </body>
 </html>

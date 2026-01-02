@@ -20,7 +20,7 @@ html, body {
 ====================== */
 #timeline-svg {
   position: fixed;
-  left: 40px;   /* timeline near left edge */
+  left: 40px;
   top: 0;
   height: 100vh;
   width: 60px;
@@ -33,23 +33,31 @@ html, body {
 ====================== */
 #intro {
   display: flex;
-  align-items: center;
+  flex-wrap: wrap;           /* allows stacking on small screens */
+  align-items: flex-start;   /* top align to remove big gap */
   justify-content: flex-start;
   min-height: 100vh;
-  padding-left: 80px;  /* space for timeline */
+  padding-left: 80px;        /* space for timeline */
   gap: 32px;
 }
 
-/* Portrait image stays colored */
-.intro-image img {
-  width: 100%;
-  display: block;
-  filter: none; /* full color */
+/* Portrait image */
+.intro-image {
+  flex: 0 0 auto;
+  max-width: 300px;         /* prevents image from stretching too much */
 }
 
-/* Intro text in B&W */
+.intro-image img {
+  width: 100%;
+  height: auto;             /* maintain aspect ratio */
+  display: block;
+  filter: none;             /* keep image colored */
+}
+
+/* Intro text B&W */
 .intro-text {
   filter: grayscale(100%);
+  flex: 1 1 400px;          /* text takes remaining space */
 }
 
 .intro-text h1 {
@@ -75,14 +83,14 @@ html, body {
 .content {
   position: relative;
   min-height: 80vh;
-  padding-left: 80px;  /* aligned with timeline */
+  padding-left: 80px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   opacity: 0;
   transform: translateX(-20px);
   transition: opacity 0.6s ease, transform 0.6s ease;
-  filter: grayscale(100%); /* all sections B&W */
+  filter: grayscale(100%);  /* all content B&W */
 }
 
 .content.active {
@@ -116,7 +124,7 @@ html, body {
   flex-direction: column;
   gap: 20px;
   padding-left: 0;
-  filter: grayscale(100%); /* keep resume B&W */
+  filter: grayscale(100%);
 }
 
 .resume-link {
@@ -144,11 +152,20 @@ html, body {
     gap: 24px;
   }
 
+  .intro-text {
+    flex: 1 1 100%;
+  }
+
   .content {
     padding-left: 40px;
   }
 
   #timeline-svg {
     left: 20px;
+  }
+
+  .intro-image {
+    max-width: 80%;  /* scale portrait for small screens */
+    margin: 0 auto;
   }
 }
