@@ -1,4 +1,6 @@
-/* RESET */
+/* ======================
+   RESET
+====================== */
 * {
   margin: 0;
   padding: 0;
@@ -8,17 +10,18 @@
 
 html, body {
   width: 100%;
-  overflow-x: hidden; /* important to remove horizontal scroll */
+  overflow-x: hidden; /* prevents horizontal scroll */
   background: #f4f4f4;
   color: #111;
+  filter: grayscale(100%); /* all page B&W by default */
 }
 
 /* ======================
-   SVG TIMELINE
+   TIMELINE SVG
 ====================== */
 #timeline-svg {
   position: fixed;
-  left: 40px;   /* timeline sits near left */
+  left: 40px;   /* timeline near left edge */
   top: 0;
   height: 100vh;
   width: 60px;
@@ -34,21 +37,18 @@ html, body {
   align-items: center;
   justify-content: flex-start;
   min-height: 100vh;
-  padding-left: 80px;  /* matches timeline + margin */
+  padding-left: 80px;  /* space for timeline */
   gap: 32px;
 }
 
-.intro-image {
-  flex: 0 0 35%;
-  max-width: 420px;
-}
-
+/* Portrait image stays colored */
 .intro-image img {
   width: 100%;
   display: block;
-  filter: grayscale(100%);
+  filter: none; /* override B&W for image */
 }
 
+/* Intro text remains B&W */
 .intro-text h1 {
   font-size: 50px;
   font-weight: 400;
@@ -72,7 +72,7 @@ html, body {
 .content {
   position: relative;
   min-height: 80vh;
-  padding-left: 80px;  /* same as intro */
+  padding-left: 80px;  /* aligned with timeline */
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -105,7 +105,7 @@ html, body {
 }
 
 /* ======================
-   RESUME
+   RESUME SECTION
 ====================== */
 .resume-block {
   display: flex;
