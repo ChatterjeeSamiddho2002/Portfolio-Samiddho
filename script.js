@@ -1,27 +1,22 @@
-const path = document.getElementById("timeline-path");
-const sections = document.querySelectorAll(".content");
+// Activate content on scroll
+const contents = document.querySelectorAll('.content');
 
-// Prepare SVG path
+window.addEventListener('scroll', () => {
+  const scrollY = window.scrollY + window.innerHeight * 0.75;
+  contents.forEach(content => {
+    if (scrollY > content.offsetTop) {
+      content.classList.add('active');
+    }
+  });
+});
+
+// Optional: Animate SVG timeline path drawing
+const path = document.getElementById('timeline-path');
 const pathLength = path.getTotalLength();
 path.style.strokeDasharray = pathLength;
 path.style.strokeDashoffset = pathLength;
 
-window.addEventListener("scroll", () => {
-  const scrollTop = window.scrollY;
-  const maxScroll =
-    document.documentElement.scrollHeight - window.innerHeight;
-
-  const scrollRatio = scrollTop / maxScroll;
-
-  // Draw the line
-  path.style.strokeDashoffset =
-    pathLength - pathLength * scrollRatio;
-
-  // Reveal sections
-  sections.forEach(section => {
-    const rect = section.getBoundingClientRect();
-    if (rect.top < window.innerHeight * 0.65) {
-      section.classList.add("active");
-    }
-  });
+window.addEventListener('scroll', () => {
+  const scrollPercent = window.scrollY / (document.body.scrollHeight - window.innerHeight);
+  path.style.strokeDashoffset = pathLength * (1 - scrollPercent);
 });

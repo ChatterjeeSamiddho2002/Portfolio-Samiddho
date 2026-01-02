@@ -6,42 +6,57 @@
   font-family: Helvetica, Arial, sans-serif;
 }
 
-body {
+html, body {
+  width: 100%;
+  overflow-x: hidden; /* important to remove horizontal scroll */
   background: #f4f4f4;
   color: #111;
+}
+
+/* ======================
+   SVG TIMELINE
+====================== */
+#timeline-svg {
+  position: fixed;
+  left: 40px;   /* timeline sits near left */
+  top: 0;
+  height: 100vh;
+  width: 60px;
+  pointer-events: none;
+  overflow: visible;
 }
 
 /* ======================
    INTRO SECTION
 ====================== */
 #intro {
-  height: 100vh;
   display: flex;
   align-items: center;
-  padding-left: 80px;     /* reduced from 120 */
-  gap: 48px;              /* reduced from 80 */
+  justify-content: flex-start;
+  min-height: 100vh;
+  padding-left: 80px;  /* matches timeline + margin */
+  gap: 32px;
 }
 
-.intro-art {
-  width: 35%;
+.intro-image {
+  flex: 0 0 35%;
   max-width: 420px;
 }
 
-.intro-art img {
+.intro-image img {
   width: 100%;
-  height: auto;
-  display: block;         /* removes inline spacing */
+  display: block;
   filter: grayscale(100%);
 }
 
 .intro-text h1 {
-  font-size: 56px;        /* slightly reduced */
+  font-size: 50px;
   font-weight: 400;
 }
 
 .intro-text p {
   margin-top: 12px;
-  letter-spacing: 2px;    /* reduced from 3 */
+  letter-spacing: 2px;
 }
 
 .intro-text span {
@@ -52,57 +67,32 @@ body {
 }
 
 /* ======================
-   TIMELINE
-====================== */
-#timeline {
-  position: fixed;
-  left: 60px;
-  top: 0;
-  height: 100vh;
-  width: 2px;
-  pointer-events: none;
-}
-
-#line {
-  width: 2px;
-  height: 0;
-  background: #000;
-}
-
-/* ======================
    CONTENT SECTIONS
 ====================== */
 .content {
   position: relative;
-  min-height: 80vh;       /* reduced from 100vh */
-  padding-left: 180px;    /* leaves space for timeline */
+  min-height: 80vh;
+  padding-left: 80px;  /* same as intro */
   display: flex;
-  align-items: center;
+  flex-direction: column;
+  justify-content: center;
   opacity: 0;
-  transform: translateX(-30px);
+  transform: translateX(-20px);
   transition: opacity 0.6s ease, transform 0.6s ease;
 }
 
-.content h2 {
-  font-size: 42px;
-  font-weight: 400;
-}
-
-/* ACTIVE STATE */
 .content.active {
   opacity: 1;
   transform: translateX(0);
 }
 
-/* ======================
-   CONNECTOR LINE
-====================== */
+/* Connector line for sections */
 .content::before {
   content: "";
   position: absolute;
-  left: -100px;
+  left: -60px;
   top: 50%;
-  width: 60px;
+  width: 40px;
   height: 1px;
   background: #000;
   transform: rotate(-20deg);
@@ -115,12 +105,13 @@ body {
 }
 
 /* ======================
-   RESUME SECTION
+   RESUME
 ====================== */
 .resume-block {
   display: flex;
   flex-direction: column;
   gap: 20px;
+  padding-left: 0;
 }
 
 .resume-link {
@@ -135,4 +126,24 @@ body {
 
 .resume-link:hover {
   opacity: 0.6;
+}
+
+/* ======================
+   RESPONSIVE
+====================== */
+@media (max-width: 900px) {
+  #intro {
+    flex-direction: column;
+    text-align: center;
+    padding-left: 40px;
+    gap: 24px;
+  }
+
+  .content {
+    padding-left: 40px;
+  }
+
+  #timeline-svg {
+    left: 20px;
+  }
 }
