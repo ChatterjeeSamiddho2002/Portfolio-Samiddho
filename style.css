@@ -10,10 +10,9 @@
 
 html, body {
   width: 100%;
-  overflow-x: hidden; /* prevents horizontal scroll */
+  overflow-x: hidden; /* prevent horizontal scroll */
   background: #f4f4f4;
   color: #111;
-  filter: grayscale(100%); /* all page B&W by default */
 }
 
 /* ======================
@@ -45,10 +44,14 @@ html, body {
 .intro-image img {
   width: 100%;
   display: block;
-  filter: none; /* override B&W for image */
+  filter: none; /* full color */
 }
 
-/* Intro text remains B&W */
+/* Intro text in B&W */
+.intro-text {
+  filter: grayscale(100%);
+}
+
 .intro-text h1 {
   font-size: 50px;
   font-weight: 400;
@@ -79,6 +82,7 @@ html, body {
   opacity: 0;
   transform: translateX(-20px);
   transition: opacity 0.6s ease, transform 0.6s ease;
+  filter: grayscale(100%); /* all sections B&W */
 }
 
 .content.active {
@@ -112,6 +116,7 @@ html, body {
   flex-direction: column;
   gap: 20px;
   padding-left: 0;
+  filter: grayscale(100%); /* keep resume B&W */
 }
 
 .resume-link {
